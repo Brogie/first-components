@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/first-components.esm.js"></script>
+  <script nomodule src="/build/first-components.js"></script>
+
+  <script>
+    window.onload = function () {
+      let rating = document.getElementById("rating");
+      rating.addEventListener("ratingUpdated", function (event) {
+        alert(event.detail.value);
+      })
+    };
+  </script>
+
+</head>
+<body>
+  <k-rating id="rating" max-value="5" value="3"></k-rating>
+</body>
+</html>
