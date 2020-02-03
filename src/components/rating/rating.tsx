@@ -12,7 +12,7 @@ export class Rating {
   @Prop() value: number = 0;
 
   @State() starList: Array<object> = [];
-
+  /** Event triggers whenever the amount of stars is changed */
   @Event() ratingUpdated: EventEmitter;
 
   componentWillLoad() {

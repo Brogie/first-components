@@ -15,9 +15,9 @@
 
 ## Events
 
-| Event           | Description | Type               |
-| --------------- | ----------- | ------------------ |
-| `ratingUpdated` |             | `CustomEvent<any>` |
+| Event           | Description                                            | Type               |
+| --------------- | ------------------------------------------------------ | ------------------ |
+| `ratingUpdated` | Event triggers whenever the amount of stars is changed | `CustomEvent<any>` |
 
 
 ----------------------------------------------

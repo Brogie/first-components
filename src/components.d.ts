@@ -10,6 +10,16 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface KButton {
+    /**
+    * The colour of button to display can be plain, primary or danger
+    */
+    'color': 'plain' | 'primary' | 'danger';
+    /**
+    * The button format to display can be basic, raised, outline or flat
+    */
+    'type': 'basic' | 'raised' | 'outline' | 'flat';
+  }
   interface KRating {
     /**
     * The amount of stars
@@ -25,22 +35,42 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLKButtonElement extends Components.KButton, HTMLStencilElement {}
+  var HTMLKButtonElement: {
+    prototype: HTMLKButtonElement;
+    new (): HTMLKButtonElement;
+  };
+
   interface HTMLKRatingElement extends Components.KRating, HTMLStencilElement {}
   var HTMLKRatingElement: {
     prototype: HTMLKRatingElement;
     new (): HTMLKRatingElement;
   };
   interface HTMLElementTagNameMap {
+    'k-button': HTMLKButtonElement;
     'k-rating': HTMLKRatingElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface KButton {
+    /**
+    * The colour of button to display can be plain, primary or danger
+    */
+    'color'?: 'plain' | 'primary' | 'danger';
+    /**
+    * The button format to display can be basic, raised, outline or flat
+    */
+    'type'?: 'basic' | 'raised' | 'outline' | 'flat';
+  }
   interface KRating {
     /**
     * The amount of stars
     */
     'maxValue'?: number;
+    /**
+    * Event triggers whenever the amount of stars is changed
+    */
     'onRatingUpdated'?: (event: CustomEvent<any>) => void;
     /**
     * The current rating of the stars
@@ -49,6 +79,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'k-button': KButton;
     'k-rating': KRating;
   }
 }
@@ -59,6 +90,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'k-button': LocalJSX.KButton & JSXBase.HTMLAttributes<HTMLKButtonElement>;
       'k-rating': LocalJSX.KRating & JSXBase.HTMLAttributes<HTMLKRatingElement>;
     }
   }
