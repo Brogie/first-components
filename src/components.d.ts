@@ -20,6 +20,9 @@ export namespace Components {
     */
     'type': 'basic' | 'raised' | 'outline' | 'flat';
   }
+  interface KGreeting {
+    'name': string;
+  }
   interface KRating {
     /**
     * The amount of stars
@@ -41,6 +44,12 @@ declare global {
     new (): HTMLKButtonElement;
   };
 
+  interface HTMLKGreetingElement extends Components.KGreeting, HTMLStencilElement {}
+  var HTMLKGreetingElement: {
+    prototype: HTMLKGreetingElement;
+    new (): HTMLKGreetingElement;
+  };
+
   interface HTMLKRatingElement extends Components.KRating, HTMLStencilElement {}
   var HTMLKRatingElement: {
     prototype: HTMLKRatingElement;
@@ -48,6 +57,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'k-button': HTMLKButtonElement;
+    'k-greeting': HTMLKGreetingElement;
     'k-rating': HTMLKRatingElement;
   }
 }
@@ -62,6 +72,9 @@ declare namespace LocalJSX {
     * The button format to display can be basic, raised, outline or flat
     */
     'type'?: 'basic' | 'raised' | 'outline' | 'flat';
+  }
+  interface KGreeting {
+    'name'?: string;
   }
   interface KRating {
     /**
@@ -80,6 +93,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'k-button': KButton;
+    'k-greeting': KGreeting;
     'k-rating': KRating;
   }
 }
@@ -91,6 +105,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'k-button': LocalJSX.KButton & JSXBase.HTMLAttributes<HTMLKButtonElement>;
+      'k-greeting': LocalJSX.KGreeting & JSXBase.HTMLAttributes<HTMLKGreetingElement>;
       'k-rating': LocalJSX.KRating & JSXBase.HTMLAttributes<HTMLKRatingElement>;
     }
   }
