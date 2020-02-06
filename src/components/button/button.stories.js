@@ -5,15 +5,6 @@ import {withA11y} from "@storybook/addon-a11y";
 import {themes} from "@storybook/theming/dist/create";
 import {withOptions} from "@storybook/addon-options";
 
-
-// storiesOf('Test Component', module)
-//   .addParameters({ jest: ["button"] })
-//   .add('Default', () => '<k-button color="primary" type="raised">Test</k-button>', {
-//     notes: {
-//       markdown: readme
-//     }
-//   });
-
 const stories = storiesOf('K Button', module);
 
 stories.addDecorator(withKnobs);
@@ -41,10 +32,3 @@ stories.add('with a button', () =>
       ${text('Content', 'Button')}
     </k-button>`
 );
-// // Knobs as dynamic variables.
-// stories.add('as dynamic variables', () => {
-//   const name = text('Name', 'Arunoda Susiripala');
-//   const age = number('Age', 89);
-//   const content = `I am ${name} and I'm ${age} years old.`;
-//   return `<div>${content}</div>`;
-// });

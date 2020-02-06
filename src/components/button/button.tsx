@@ -8,7 +8,7 @@ import {Component, Element, h, Prop, State} from '@stencil/core';
 export class Button {
   /**The button format to display can be basic, raised, outline or flat*/
   @Prop() type: 'basic' | 'raised' | 'outline' | 'flat' = 'basic';
-  /**The colour of button to display can be plain, primary or danger*/
+  /**The colour of button to display can be plain, primary or danger this is edited*/
   @Prop() color: 'plain' | 'primary' | 'danger' = 'plain';
 
   @State() ripples: JSX.Element[] = [];

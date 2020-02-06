@@ -1,7 +1,7 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body{height: 900px;}
 header {
-  background-image: linear-gradient(to bottom right, #2aabab, #3480de);
+  background-image: linear-gradient(to bottom right, #ffbb72, #5c8ed6);
   text-align: center;
   width: 100%;
   height: auto;
@@ -17,6 +17,7 @@ header .overlay{
   padding: 50px;
   color: #FFF;
   text-shadow: 1px 1px 1px #333;
+  /*background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);*/
 }
 
 h1 {

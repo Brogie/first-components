@@ -16,7 +16,9 @@ export class Greeting {
             <p class="user">Hello {this.name}!</p>
             <h1>This is a header</h1>
             <h3>Be glad it isn't purple</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam
+              debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam
+              consequatur ab.</p>
           </div>
         </header>
       </div>

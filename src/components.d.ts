@@ -12,7 +12,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface KButton {
     /**
-    * The colour of button to display can be plain, primary or danger
+    * The colour of button to display can be plain, primary or danger this is edited
     */
     'color': 'plain' | 'primary' | 'danger';
     /**
@@ -65,7 +65,7 @@ declare global {
 declare namespace LocalJSX {
   interface KButton {
     /**
-    * The colour of button to display can be plain, primary or danger
+    * The colour of button to display can be plain, primary or danger this is edited
     */
     'color'?: 'plain' | 'primary' | 'danger';
     /**
